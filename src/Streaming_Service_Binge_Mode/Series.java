@@ -8,4 +8,8 @@ public class Series {
     public void addSeason(Season s) {
         seasons.add(s);
     }
+
+    public List<Season> getSeasons() {
+        return Collections.unmodifiableList(seasons);
+    }
 }

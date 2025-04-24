@@ -14,5 +14,8 @@ public class Season implements Iterable<Episode> {
     public Iterator<Episode> iterator() {
         return new SeasonIterator(episodes);
     }
-
+    
+    public List<Episode> getEpisodes() {
+        return Collections.unmodifiableList(episodes);
+    }
 }
