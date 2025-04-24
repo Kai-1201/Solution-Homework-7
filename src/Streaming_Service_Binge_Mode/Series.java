@@ -9,6 +9,9 @@ public class Series {
         seasons.add(s);
     }
 
+    public EpisodeIterator bingeIterator() {
+        return new BingeIterator(seasons);
+    }
     public List<Season> getSeasons() {
         return Collections.unmodifiableList(seasons);
     }

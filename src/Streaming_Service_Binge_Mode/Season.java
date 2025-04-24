@@ -14,7 +14,16 @@ public class Season implements Iterable<Episode> {
     public Iterator<Episode> iterator() {
         return new SeasonIterator(episodes);
     }
-    
+
+    public EpisodeIterator reverseIterator() {
+        return new ReverseSeasonIterator(episodes);
+    }
+    public EpisodeIterator episodeIterator() {
+        return new SeasonIterator(episodes);
+    }
+    public EpisodeIterator shuffleIterator() {
+        return new ShuffleSeasonIterator(episodes);
+    }
     public List<Episode> getEpisodes() {
         return Collections.unmodifiableList(episodes);
     }
